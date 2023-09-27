@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Task-5.css">
+    <title>Task-3</title>
+</head>
+<body>
+    <script>
+        function Calculate(calculation)
+        {
+            var x = parseFloat(document.getElementById("num1").value);
+            var y = parseFloat(document.getElementById("num2").value);
+            var result;
+            if(calculation==="mul")
+                result = x*y;
+            if(calculation==="div")
+                result =  x/y; 
+            document.getElementById("output").innerHTML = "The Result is: " + result;
+        }
+    </script>
+    <label>1st Number: </label>
+    <input type="text" id="num1"><br><br>
+    <label>2nd Number: </label>
+    <input type="text" id="num2"><br><br>
+    <button onclick="Calculate('mul')">Multiply</button>
+    <button onclick="Calculate('div')">Divide</button>
+    <p id ="output"></p>
+</body>
+</html>

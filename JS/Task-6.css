@@ -1,0 +1,89 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.login-container 
+{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo
+{
+    width: 200px;
+}
+
+.input-container 
+{
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+.input-container input 
+{
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.input-container i 
+{
+    font-size: 18px; 
+    margin-right: 10px;
+    color: #555; 
+}
+
+.lock
+{
+    width: 10px;
+}
+
+.login-button 
+{
+    background-color: #3163df;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.remember-me 
+{
+    float: left;
+    margin-right: 10px;
+}
+
+.forgot-password 
+{
+    float: right;
+    text-decoration: none;
+    color: #3498db;
+}
+
+.signup-text 
+{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.signup-link 
+{
+    text-decoration: none;
+    color: #3498db;
+}

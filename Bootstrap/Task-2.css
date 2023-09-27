@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    list-style: none;
+}
+
+.header {
+    background-color: rgb(255, 215, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.left h1 
+{
+    font-weight: bolder;
+    margin: 0;
+}
+
+.right 
+{
+    text-align: right;
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    margin-top: 10px; 
+}
+
+.right > div 
+{
+    text-align: left;
+    margin-right: 20px; 
+}
+
+@media (max-width: 767px) 
+{
+    .right {
+        text-align: right;
+    }
+
+    .right > div {
+        text-align: left;
+        margin-right: 0; 
+        margin-bottom: 10px; 
+        flex-basis: 100%; 
+    }
+
+    .get-quote-button 
+    {
+        background-color: rgb(0, 0, 65);
+        color: #fff;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border: 1px solid white;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .second
+    {
+        font-size: 15px;
+        background-color: rgba(255, 255, 255, 0);
+        font-weight: 500;
+        margin-top: 0px;
+    }
+}
+
+.navbar 
+{
+    margin-top: 10px;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(0, 0, 65);
+    display: flex;
+}
+
+.navbar-nav.horizontal 
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; 
+}
+
+.navbar-nav.horizontal .nav-item 
+{
+    margin-right: 20px;
+}
+
+.navbar-nav.horizontal .nav-item:last-child 
+{
+    margin-right: 0;
+}
+
+.navbar-nav.horizontal .nav-item a 
+{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-nav.horizontal .nav-item a:hover
+{
+    color: rgb(255, 215, 0);
+}
+
+.get-quote-button 
+{
+    background-color: rgb(0, 0, 65);
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.get-quote-button:hover 
+{
+    background-color: #bbbbbb47;
+}
+
+img
+{
+    width: 100%;
+    height: auto;
+}
+
+.overlay 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.image_text
+{
+    position: relative;
+    text-align: center;
+    color: white; 
+}
+
+.text 
+{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 24px;  
+}
+
+h5
+{
+    padding-bottom: 10px;
+}
+
+.professional
+{
+    padding-bottom: 25px;
+    font-weight: bolder;
+}
+
+.second
+{
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 500;
+}
+
+.card
+{
+    color: rgb(255, 215, 0);
+    background-color: rgb(0, 0, 65);
+    padding: 50px;
+}
+
+.card_2
+{
+    color: rgb(0, 0, 65);
+    background-color: rgb(255, 215, 0);
+}
+
+p
+{
+    font-size: 24px;
+    font-weight: bold;
+}

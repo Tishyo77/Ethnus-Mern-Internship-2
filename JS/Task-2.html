@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task-2</title>
+</head>
+<body>
+    <script>
+        function sort(input) 
+        {
+            return input.split('').sort().join('');
+        }
+        function display() 
+        {
+            const input = document.getElementById('str').value;
+            const newStr = sort(input);
+            document.getElementById('output').innerHTML = 'Output: ' + newStr;
+        }
+    </script>
+    <label for="inputString">String:</label>
+    <input type="text" id="str">
+    <button onclick="display()">Enter</button>
+    <p id="output"></p>
+</body>
+</html>

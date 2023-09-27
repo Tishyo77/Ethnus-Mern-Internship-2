@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task-5</title>
+    <style>
+        .content-container 
+        {
+            background: linear-gradient(to bottom, yellow, pink);
+            padding: 20px;
+            padding-right: 100px; 
+            border-radius: 10px; 
+            width: 50%; 
+            margin: 0 auto; 
+        }
+        .red-button 
+        {
+            background-color: red;
+            color: white;
+            border: 2px solid black;
+            border-radius: 15px; 
+            padding: 5px 20px; 
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 5px;
+        }
+        td label {
+            display: block;
+            text-align: right;
+            margin-right: 10px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        select,
+        textarea 
+        {
+            width: 100%;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] 
+        {
+            margin-right: 5px;
+        }
+        .check
+        {
+            text-align: right;
+        }
+        .error-message 
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <center>
+            <br>
+            Registration Form
+            <br><br>
+            <form id="registration-form">
+                <table>
+                    <tr>
+                        <td><label for="fname">First Name</label></td>
+                        <td><input type="text" style="border:none" name="fname"><span class="error-message"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lname">Last Name</label></td>
+                        <td><input type="text" style="border:none" name="lname"><span class="error-message"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="text" style="border:none" name="email"><span class="error-message"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass">Password</label></td>
+                        <td><input type="password" style="border:none" name="pass"><span class="error-message"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="repass">Re-enter Password</label></td>
+                        <td><input type="password" style="border:none" name="repass"><span class="error-message"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sex">Gender</label></td>
+                        <td><input type="radio" name="gender"/> Male <br>
+                            <input type="radio" name="gender"/> Female </td>
+                    </tr>
+                    <tr>
+                        <td><label for="age">Age</label></td>
+                        <td><input type="number" style="border:none" name="age"><span class="error-message"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="no">Phone Number</label></td>
+                        <td><input type="number" style="border:none" name="no"><span class="error-message"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="add">Address</label></td>
+                        <td><textarea style="border:none"></textarea><span class="error-message"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="state">State</label></td>
+                        <td><input type="text" style="border:none" name="state"><span class="error-message"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="country">Country</label></td>
+                        <td>
+                            <select name="country"> 
+                                <option value="option" selected>Choose your Country</option>
+                                <option value="China">China</option>
+                                <option value="India">India</option>
+                                <option value="USA">USA</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="lang">Languages Known</label></td>
+                        <td>
+                            <input type="checkbox">English
+                            <input type="checkbox">Kannada
+                            <input type="checkbox">Hindi
+                            <input type="checkbox">Telugu
+                            <input type="checkbox">Bengali
+                            <span class="error-message"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <label style="border: none;"></label>
+                        <td class="check" style="border: none;"><input type="checkbox">Hereby I declare all the details given are true</td>
+                    </tr>
+                    <tr>
+                        <td style="border: none;"></td>
+                        <td style="border: none;" align="right">Login to <a href="https://ethnus.com/">Ethnus</a> website</td>
+                    </tr>
+                </table>
+                <br>
+                <tr>
+                    <td><button class="red-button" type="submit">Register</button></td>
+                </tr>
+            </form>
+        </center>
+    </div>
+    <script>
+        document.getElementById("registration-form").addEventListener("submit", function(event) {
+            var fields = [
+                { name: "fname", label: "First Name" },
+                { name: "lname", label: "Last Name" },
+                { name: "email", label: "Email" },
+                { name: "pass", label: "Password" },
+                { name: "repass", label: "Re-enter Password" }
+            ];
+
+            for (var i = 0; i < fields.length; i++) 
+            {
+                var fieldName = fields[i].name;
+                var fieldLabel = fields[i].label;
+                var fieldInput = document.getElementsByName(fieldName)[0];
+                var errorSpan = document.querySelector('input[name="' + fieldName + '"] + span.error-message');
+
+                if (fieldInput.value === "") 
+                {
+                    errorSpan.textContent = "POOR";
+                    event.preventDefault(); 
+                } else 
+                {
+                    errorSpan.textContent = ""; 
+                }
+            }
+
+            var emailInput = document.getElementsByName("email")[0];
+            var emailErrorSpan = document.querySelector('input[name="email"] + span.error-message');
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+            if (emailInput.value === "") 
+            {
+                emailErrorSpan.textContent = "POOR";
+                event.preventDefault(); 
+            } 
+            else if (!emailPattern.test(emailInput.value)) 
+            {
+                emailErrorSpan.textContent = "INVALID";
+                event.preventDefault(); 
+            } 
+            else 
+            {
+                emailErrorSpan.textContent = ""; 
+            }
+
+            var passInput = document.getElementsByName("pass")[0];
+            var repassInput = document.getElementsByName("repass")[0];
+            var repassErrorSpan = document.querySelector('input[name="repass"] + span.error-message');
+
+            if (repassInput.value === "") 
+            {
+                repassErrorSpan.textContent = "POOR";
+                event.preventDefault(); 
+            } 
+            else if (repassInput.value !== passInput.value) 
+            {
+                repassErrorSpan.textContent = "MISMATCH";
+                event.preventDefault(); 
+            } 
+            else 
+            {
+                repassErrorSpan.textContent = ""; 
+            }
+            var ageInput = document.getElementsByName("age")[0];
+            var ageErrorSpan = document.querySelector('input[name="age"] + span.error-message');
+
+            if (ageInput.value === "") 
+            {
+                ageErrorSpan.textContent = "POOR";
+                event.preventDefault();
+            } 
+            else 
+            {
+                ageErrorSpan.textContent = "";
+            }
+
+            var phoneInput = document.getElementsByName("no")[0];
+            var phoneErrorSpan = document.querySelector('input[name="no"] + span.error-message');
+
+            if (phoneInput.value === "") 
+            {
+                phoneErrorSpan.textContent = "POOR";
+                event.preventDefault();
+            }
+            else 
+            {
+                phoneErrorSpan.textContent = "";
+            }
+
+            var addressTextarea = document.querySelector('textarea');
+            var addressErrorSpan = document.querySelector('textarea + span.error-message');
+
+            if (addressTextarea.value === "") 
+            {
+                addressErrorSpan.textContent = "POOR";
+                event.preventDefault();
+            } 
+            else 
+            {
+                addressErrorSpan.textContent = "";
+            }
+
+            var stateInput = document.getElementsByName("state")[0];
+            var stateErrorSpan = document.querySelector('input[name="state"] + span.error-message');
+
+            if (stateInput.value === "") 
+            {
+                stateErrorSpan.textContent = "POOR";
+                event.preventDefault();
+            } 
+            else 
+            {
+                stateErrorSpan.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>

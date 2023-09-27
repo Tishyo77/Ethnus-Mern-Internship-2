@@ -1,0 +1,44 @@
+.material-card 
+{
+    background-color: white;
+    padding-bottom: 20px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 500px;
+    width: 250px;
+}
+
+.material-card h2 
+{
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+    background-color: aquamarine;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.material-card p 
+{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.material-card .links 
+{
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.material-card .links a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    background-color: rgb(244, 255, 163);
+    color: rgb(87, 97, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="Task-5.css">
+        <title>Task-4</title>
+    </head>
+</head>
+<body>
+    <script>
+        function showDate() 
+        {
+            const now = new Date();
+            const dateElement = document.getElementById("outputDate");
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = now.toLocaleDateString(undefined, options);
+            dateElement.textContent = "Date: " + formattedDate;
+        }
+        function showTime() 
+        {
+            const now = new Date();
+            const timeElement = document.getElementById("outputTime");
+            const formattedTime = now.toLocaleTimeString();
+            timeElement.textContent = "Time: " + formattedTime;
+        }
+    </script>
+    <button onclick="showDate()">Show Date</button>
+    <p id="outputDate"></p>
+    <button onclick="showTime()">Show Time</button>
+    <p id="outputTime"></p>
+</body>
+</html>

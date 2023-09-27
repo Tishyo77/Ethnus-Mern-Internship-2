@@ -1,0 +1,31 @@
+body {
+    background-color: #ffffff;
+}
+.container {
+    background-color: #e6e6e6;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.label-column {
+    width: 30%;
+    text-align: left; 
+    padding-right: 10px;
+    margin: 0;
+}
+.input-column {
+    width: 70%;
+    margin: 0;
+}
+.custom-button {
+    background-color: red;
+    width: 100%;
+    color: white;
+}
